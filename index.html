@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerador de senha</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="content">
+        <div class="generated-password">
+          <div id="show-password" class="password"></div>
+          <div>
+            <button id="btn-copy" class="btn-copy">Copiar</button>
+          </div>
+        </div>
+        <form id="form" action="">
+          <div class="chars-length">
+            <label for="input-pw-length"
+              >Insira o tamanho da senha (mín 8 e máx 63)</label
+            >
+            <input type="number" min="8" max="64" id="input-pw-length" />
+          </div>
+          <ul class="chars-type">
+            <li>
+              <label for="uppercase-chars">Maiúsculo</label>
+              <input type="checkbox" id="uppercase-chars" />
+            </li>
+            <li>
+              <label for="lowercase-chars">Minúsculas</label>
+              <input type="checkbox" id="lowercase-chars" />
+            </li>
+            <li>
+              <label for="numbers-chars">Números</label>
+              <input type="checkbox" id="numbers-chars" />
+            </li>
+            <li>
+              <label for="special-chars">Especiais</label>
+              <input type="checkbox" id="special-chars" />
+            </li>
+          </ul>
+          <input class="btn-generate-pw" value="Gerar senha" type="submit" />
+        </form>
+      </div>
+    </main>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

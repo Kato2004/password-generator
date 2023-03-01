@@ -1,0 +1,121 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+  border: none;
+  font-family: sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  color: rgb(200, 200, 200);
+  background-color: #333;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-radius: 10px;
+}
+
+.content ul {
+  list-style: none;
+}
+
+.generated-password {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.generated-password .password {
+  background-color: rgb(200, 200, 200);
+  color: #000;
+  width: 100%;
+  padding: 15px 20px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.generated-password div:last-child {
+  display: flex;
+  white-space: nowrap;
+}
+
+.generated-password div:last-child button {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.chars-length {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.chars-length input {
+  padding: 5px;
+  width: 90px;
+  font-size: 20px;
+  background-color: rgb(200, 200, 200);
+}
+
+.chars-type {
+  font-size: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.chars-type li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-generate-pw {
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .chars-type {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .chars-length label {
+    font-size: 16px;
+  }
+}
