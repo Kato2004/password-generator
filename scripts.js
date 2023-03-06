@@ -14,13 +14,14 @@ let chars = "";
 let charsNumbers = "0123456789";
 let charsLowercase = "abcdefghijklmnopqrstuvwxyz";
 let charsUppercase = "ABCDEFGHIJLMNOPQRSTUVWXYZ";
-let charsSpecial = "!@#$%^&*()+?><:{}[]";
+let charsSpecial = "!@#$%^&*()+?:{}[]";
 
 inputLength.value = 8;
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
   password = "";
+
+  e.preventDefault();
   if (inputCharsUppercase.checked) chars += charsUppercase;
   if (inputCharsLowercase.checked) chars += charsLowercase;
   if (inputCharsNumber.checked) chars += charsNumbers;
@@ -33,8 +34,11 @@ form.addEventListener("submit", (e) => {
       const randomNumber = Math.floor(Math.random() * chars.length);
       password += chars.substring(randomNumber, randomNumber + 1);
     }
+    console.log(password);
+    console.log(password.length);
 
-    showPassword.innerHTML = password;
+    showPassword.innerHTML = String(password);
+    console.log(showPassword.innerHTML);
     chars = "";
     password = "";
   }
